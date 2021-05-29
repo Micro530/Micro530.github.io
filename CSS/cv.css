@@ -90,3 +90,18 @@ pointer-events: none; }
 #competences .container .classement3 { background-position: 0 -56px; }
 #competences .container .classement4 { background-position: 0 -28px; }
 #competences .container .classement5 { background-position: 0 0px; }
+/******************************************
+* Passions
+******************************************/
+.passion {
+    color: #fff;
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 5px;
+    background: #000;
+    position: relative;
+    font-size: 1.2em;
+    border-radius: 10px;
+}
+
