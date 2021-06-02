@@ -1,0 +1,645 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AP2_MediaTek86</name>
+    </assembly>
+    <members>
+        <member name="M:AP2_MediaTek86.connexion.ConnexionBDD.#ctor(System.String)">
+            <summary>
+            constructeur privé appelé uniquement par GetInstance
+            </summary>
+            <param name="chaineConnection">la chaine de connexion à la base de données</param>
+        </member>
+        <member name="M:AP2_MediaTek86.connexion.ConnexionBDD.getInstance(System.String)">
+            <summary>
+            création de l'instance si elle n'est pas deja existante
+            </summary>
+            <param name="chaineConnection">la chaine de connexion à la base de données</param>
+            <returns>l'instance de la connexion</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.connexion.ConnexionBDD.reqUpdate(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            execution requete de type update (insert, delete, update, ...)
+            </summary>
+            <param name="chaineRequete">la requete</param>
+            <param name="parameters">les paramètres de la requete</param>
+        </member>
+        <member name="M:AP2_MediaTek86.connexion.ConnexionBDD.ReqSelect(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            execution du requete de type SELECT
+            </summary>
+            <param name="chaineRequete">la requete</param>
+            <param name="parameters">les paramètres de la requete</param>
+        </member>
+        <member name="M:AP2_MediaTek86.connexion.ConnexionBDD.creationCommand(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            permet de créer la commande avec la ChaineRequete et le dictionnaire de paramètres
+            </summary>
+            <param name="chaineRequete">la requete</param>
+            <param name="parameters">les paramètres de la requete</param>
+        </member>
+        <member name="M:AP2_MediaTek86.connexion.ConnexionBDD.Read">
+            <summary>
+            envoi true si le curseur contient quelques chose et passe à la ligne suivante
+            </summary>
+            <returns>bool</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.connexion.ConnexionBDD.Field(System.String)">
+            <summary>
+            permet de récupérer une valeur de la ligne actuelle
+            </summary>
+            <param name="nomChamps">le nom du champs correspondant à la valeur que l'on souhaite récupérer</param>
+            <returns>la valeur correspondant au champs</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.connexion.ConnexionBDD.close">
+            <summary>
+            ferme le curseur
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.controleur.Controle.frmPersonnel">
+            <summary>
+            permet de mémoriser le formulaire personnel
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.controleur.Controle.frmAbsences">
+            <summary>
+            permet de mémoriser le formulaire absence
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.controleur.Controle.frmConnexion">
+            <summary>
+            permet de mémoriser le formulaire connexion
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.#ctor">
+            <summary>
+            constructeur de control qui instancie le formulaire de connexion
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.GetLesPersonnels">
+            <summary>
+            recupére les données depuis AccesDonnees
+            </summary>
+            <returns>la liste du personnel</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.GetLesAbsences(AP2_MediaTek86.model.Personnel)">
+            <summary>
+            recupére les données depuis AccesDonnees
+            </summary>
+            <param name="idpersonnel">le personnel</param>
+            <returns>la liste des absences</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.GetLesMotif">
+            <summary>
+            recupére les données depuis AccesDonnees
+            </summary>
+            <returns>la liste dus motif d'absences</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.GetLesServices">
+            <summary>
+            recupére les données depuis AccesDonnees
+            </summary>
+            <returns>la liste des services</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.Ajouter(System.Object)">
+            <summary>
+            envoie l'objet pour qu'il soit ajouté à la bdd
+            </summary>
+            <param name="unObjet">soit de type Personnel ou Absences</param>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.Modifier(System.Object)">
+            <summary>
+            envoie l'objet devant être modifié à la bdd
+            </summary>
+            <param name="unObjet">soit de type Personnel ou Absences</param>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.Supprimer(System.Object)">
+            <summary>
+            gére la demande de suppression
+            </summary>
+            <param name="unObjet">soit de type Personnel ou Absences</param>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.Authentification(System.String,System.String)">
+            <summary>
+            récupère la chaine d'authentification de la base de données et la compare avec les informations saisies
+            </summary>
+            <param name="identifiant">l'identifiant saisie par l'utilisateur</param>
+            <param name="mdp">le mot de passe saisie par l'utilisateur</param>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.AccesAuFrmAbsences(AP2_MediaTek86.model.Personnel)">
+            <summary>
+            permet de créer l'acces au formulaire des absences avec le personnel envoyé
+            </summary>
+            <param name="unPersonnel">le personnel ayant de absences</param>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.AccesAuFrmPersonnel">
+            <summary>
+            permet de retourner au formulaire du personnel
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.controleur.Controle.GetStringSha256Hash(System.String)">
+            <summary>
+            fonction permettant de hacher en 256 en chaine
+            </summary>
+            <param name="text">texte devant être Haché</param>
+            <returns>la chaine hachée</returns>
+        </member>
+        <member name="F:AP2_MediaTek86.dal.AccesDonnees.connectionString">
+            <summary>
+            La chaine de connexion
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.Authentification">
+            <summary>
+            Gere la requete d'authentification
+            </summary>
+            <returns>le chaine d'authentification</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.GetLesPersonnels">
+            <summary>
+            Gere la récupération de la liste du personnel 
+            </summary>
+            <returns>le liste du personnel</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.GetLesAbsences(AP2_MediaTek86.model.Personnel)">
+            <summary>
+            Gere la récupération de la liste des absences
+            </summary>
+            <param name="unPersonnel">recoie le personnel ayant des absences</param>
+            <returns>la liste de ses absences</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.GetLesServices">
+            <summary>
+            gere la récupération dela liste des services
+            </summary>
+            <returns>la liste des services</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.GetLesMotif">
+            <summary>
+            gere la récupération dela liste des motif
+            </summary>
+            <returns>la liste des motif</returns>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.AjoutPersonnel(AP2_MediaTek86.model.Personnel)">
+            <summary>
+            Ajoute un personnel
+            </summary>
+            <param name="unePersonne"> la personne à ajouter</param>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.AjoutAbsence(AP2_MediaTek86.model.Absences)">
+            <summary>
+            Ajoute une absence
+            </summary>
+            <param name="uneAbsence">l'absence à rajouter</param>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.ModifierPersonnel(AP2_MediaTek86.model.Personnel)">
+            <summary>
+            permet de modifier le personnel envoyé
+            </summary>
+            <param name="unePersonne">le personnel à modifier</param>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.ModifierAbsence(AP2_MediaTek86.model.Absences)">
+            <summary>
+            permet de modifier l'absence envoyé
+            </summary>
+            <param name="uneAbsence">modifie l'absence recu</param>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.SupprimerPersonnel(AP2_MediaTek86.model.Personnel)">
+             <summary>
+            supprime la personne recu en paramètre 
+             </summary>
+             <param name="unePersonne">la personne à supprimer</param>
+        </member>
+        <member name="M:AP2_MediaTek86.dal.AccesDonnees.SupprimerAbsence(AP2_MediaTek86.model.Absences)">
+            <summary>
+            supprime l'absence recu en paramètre
+            </summary>
+            <param name="uneAbsence">l'absence à supprimer</param>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Absences.idPersonnel">
+            <summary>
+            idpersonnel
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Absences.dateDebut">
+            <summary>
+            la date de debut
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Absences.dateFin">
+            <summary>
+            la date de fin
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Absences.idMotif">
+            <summary>
+            id du motif
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Absences.motif">
+            <summary>
+            le libelle du motif
+            </summary>
+        </member>
+        <member name="P:AP2_MediaTek86.model.Absences.IdPersonnel">
+            <summary>
+            génération de l'encapsulation
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.model.Absences.#ctor(System.Int32,System.DateTime,System.DateTime,System.Int32,System.String)">
+            <summary>
+            Constructeur de la class Absences valorisant les propriétes privées
+            </summary>
+            <param name="idPersonnel">l'id du personnel auqel l'absence appartient</param>
+            <param name="dateDebut">date de début de l'absence</param>
+            <param name="dateFin">date de fin de l'absence</param>
+            <param name="idMotif">l'id du motif de l'absence</param>
+            <param name="motif">le libellé du motif</param>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Motif.idMotif">
+            <summary>
+            id du motif
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Motif.libelle">
+            <summary>
+            libellé du motif
+            </summary>
+        </member>
+        <member name="P:AP2_MediaTek86.model.Motif.IdMotif">
+            <summary>
+            génération de l'encapsulation
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.model.Motif.#ctor(System.Int32,System.String)">
+            <summary>
+            constructeur de la la class motif
+            </summary>
+            <param name="idService">l'id unique du motif</param>
+            <param name="libelle">son nom</param>
+        </member>
+        <member name="M:AP2_MediaTek86.model.Motif.ToString">
+            <summary>
+            redéfinition de la méthode ToString afin de faciliter son utilisation dans les ComboBox
+            </summary>
+            <returns>retourne le libellé</returns>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Personnel.idPersonnel">
+            <summary>
+            id du personnel
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Personnel.nom">
+            <summary>
+            nom
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Personnel.prenom">
+            <summary>
+            son prénom
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Personnel.tel">
+            <summary>
+            son tel
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Personnel.mail">
+            <summary>
+            son email
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Personnel.idService">
+            <summary>
+            son id de service
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Personnel.service">
+            <summary>
+            son nom de service
+            </summary>
+        </member>
+        <member name="P:AP2_MediaTek86.model.Personnel.IdPersonnel">
+            <summary>
+            génération de l'encapsulation
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.model.Personnel.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>
+            Constructeur de la class personnel valorisant les propriétés privées
+            </summary>
+            <param name="idPersonnel">l'id unique de chaque menbre du personnel</param>
+            <param name="nom">son nom</param>
+            <param name="prenom">son prénom</param>
+            <param name="tel">son numero de téléphone</param>
+            <param name="mail">son adresse e mail</param>
+            <param name="idService">id du service auquel il appartient</param>
+            <param name="service">le nom du service auquel il appartient</param>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Service.idService">
+            <summary>
+            id su service
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.model.Service.libelle">
+            <summary>
+            libelle du service
+            </summary>
+        </member>
+        <member name="P:AP2_MediaTek86.model.Service.IdService">
+            <summary>
+            génération de l'encapsulation
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.model.Service.#ctor(System.Int32,System.String)">
+            <summary>
+            constructeur de la la class service
+            </summary>
+            <param name="idService">l'id unique du service</param>
+            <param name="libelle">son nom</param>
+        </member>
+        <member name="M:AP2_MediaTek86.model.Service.ToString">
+            <summary>
+            redéfinition de la méthode ToString afin de faciliter son utilisation dans les ComboBox
+            </summary>
+            <returns>retourne le libellé</returns>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmAbsences.controle">
+            <summary>
+            instance de controle permettant de communiquer avec lui
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmAbsences.unPersonnel">
+            <summary>
+            permet de mémoriser le personnel à l'origine des absences
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmAbsences.bdsLesAbsences">
+            <summary>
+            permet de mémoriser les absences
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmAbsences.bdsLesMotifs">
+            <summary>
+            permet de mémoriser les motifs
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.#ctor(AP2_MediaTek86.controleur.Controle,AP2_MediaTek86.model.Personnel)">
+            <summary>
+            constructeur du formulaire en instanciant controle et le personnel
+            </summary>
+            <param name="controle">l'instance de controle</param>
+            <param name="unPersonnel">le personnel à l'origine des absences</param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.ResetFormulaire">
+            <summary>
+            Permet de mettre ou remettre le formulaire à l'été d'origine
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.RemplirAbsences">
+            <summary>
+            permet de remplire le DataGridView avec les absences
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.RemplirMotif">
+            <summary>
+            permet de remplir le combo de motif
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.ActiveZoneAjouter(System.String)">
+            <summary>
+            permet d'activer la zone d'ajout/modification
+            </summary>
+            <param name="txt"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.DesactiveZoneAjouter">
+            <summary>
+            permet de desectiver la zone d'aout/modification
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.btnRetourPersonnel_Click(System.Object,System.EventArgs)">
+            <summary>
+            permet de retourner sur le formualire de personnel
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.btsAjouter_Click(System.Object,System.EventArgs)">
+            <summary>
+            évenement clic sur le bouton ajouter
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.btnModifier_Click(System.Object,System.EventArgs)">
+            <summary>
+            procédure sur au clic de modification
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.selectionDgv(System.String,System.String)">
+            <summary>
+            permet de controle la selection dans le dataGridView
+            </summary>
+            <param name="msg1">le message d'erreur devant s'afficher en cas de non selection</param>
+            <param name="msg2">le nom de l'erreur</param>
+            <returns></returns>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.btnZ2Enregistrer_Click(System.Object,System.EventArgs)">
+            <summary>
+            évènement enregistrer un ajout ou une modification
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.modificationDateCle">
+            <summary>
+            evenement si la modification change la date de début
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.btnZ2Annuler_Click(System.Object,System.EventArgs)">
+            <summary>
+            événement clic sur le bouton annuler
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.btnSup_Click(System.Object,System.EventArgs)">
+            <summary>
+            évenement bouton supprimer
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmAbsences.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmAbsences.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmConnexion.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmConnexion.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmConnexion.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmPersonnel.controle">
+            <summary>
+            instance de controle permettant de communiquer avec lui
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmPersonnel.bdsLesPersonnels">
+            <summary>
+            permet de mémoriser les personnels
+            </summary>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmPersonnel.bdsLesServices">
+            <summary>
+            permet de mémoriser les services
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.#ctor(AP2_MediaTek86.controleur.Controle)">
+            <summary>
+            le constructeur valorisant controle et initialise le formulaire
+            </summary>
+            <param name="controle">l'instance de controle avec qui communiquer</param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.ResetFormulaire">
+            <summary>
+            Permet de mettre ou remettre le formulaire à l'été d'origine
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.RemplirPersonnels">
+            <summary>
+            permet de remplire le DataGridView avec le personnel
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.RemplirServices">
+            <summary>
+            permet de remplir le combo des service
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.ActiveZoneAjouter(System.String)">
+            <summary>
+            permet d'activer la zone d'ajout/modification
+            </summary>
+            <param name="txt">texte de la zone ajouter ou modifier</param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.DesactiveZoneAjouter">
+            <summary>
+            permet de desectiver la zone d'aout/modification
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.btsAjouter_Click(System.Object,System.EventArgs)">
+            <summary>
+            évenement clic sur le bouton ajouter
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.btnZ2Annuler_Click(System.Object,System.EventArgs)">
+            <summary>
+            événement clic sur le bouton annuler
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.btnZ2Enregistrer_Click(System.Object,System.EventArgs)">
+            <summary>
+            permet de valider un ajout ou une modification
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.btnModifier_Click(System.Object,System.EventArgs)">
+            <summary>
+            permet de lancer la procedure de modification
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.selectionDgv(System.String,System.String)">
+            <summary>
+            permet de vérfier si une ligne st selectionné dans le DataGridView
+            </summary>
+            <param name="msg1"></param>
+            <param name="msg2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.btnSup_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement du bouton supprimer, supprime l'objet selectionné
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.btnAbsence_Click(System.Object,System.EventArgs)">
+            <summary>
+            permet d'acces aux absences du personnel selectionné
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:AP2_MediaTek86.vue.FrmPersonnel.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:AP2_MediaTek86.vue.FrmPersonnel.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:AP2_MediaTek86.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="T:AP2_MediaTek86.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:AP2_MediaTek86.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:AP2_MediaTek86.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+    </members>
+</doc>
