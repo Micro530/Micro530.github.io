@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
         <link rel="icon" href="favicon.ico">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
         <!-- cssLocal -->
         <link href="../CSS/cv.css" rel="stylesheet">
         <!-- Reste de la page -->
@@ -30,12 +32,12 @@
                                 <span class="fa fa-home"></span> Accueil
                             </a>
                         </li>
-                        <li class="active nav-item">
+                        <li class="nav-item">
                             <a href="cv.html" class="nav-link">
                                 <span class="fa fa-id-badge"></span> CV
                             </a>
                         </li>
-                        <li class="dropdown nav-item">
+                        <li class="active dropdown nav-item">
                             <a href="#" class="dropdown-toggle nav-link"
                                data-toggle="dropdown" role="button">
                                 <span class="fa fa-list-alt"></span> Réalisations <span class="caret"></span>
@@ -55,7 +57,6 @@
                                 <li role="presentation" class="dropdown-item">
                                     <a role="menuitem" href="#">Site web</a>
                                 </li>
-
                                 <li role="presentation" class="dropdown-divider"></li>
                                 <li role="presentation" class="dropdown-header dropdown-item">
                                     En entreprise
@@ -155,215 +156,67 @@
                 </div>
             </div>
         </nav>
+        <!-- Emplacement pour le contenu principal de la page -->
 
-        <!-- Pied de page -->
-        <div class="jumbotron">
+        <section class="jumbotron text-center">
             <div class="container">
-                <div class="row cadreCV">
-                    <div id="cv-entete" class="text-center">
-                        <div id="cv-photo">
-                            <img src="../images/maTete.jpg" alt="Ma photo d'identité">
-                        </div>
-                        <div id="cv-intro">
-                            <h1>Bonjour je m'appelle Quentin Stachowiak et voici mon CV</h1>
-                        </div>
+                <h1 class="jumbotron-heading">Atelier de professionnalisation - Deuxième Année - Le cas MediaTekFormation</h1>
+                <p class="lead text-muted">
 
+                    Dans le cas de son évolution, MediatekFormation à fait appel aux service de mon entrerpise dans le but
+                    de développer des ajouts sur son application web sous Symfony
+
+                </p>
+            </div>
+        </section>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <a href="../documents/Compte_rendu_AP1_Symfony_mediatekformation.pdf" target="_blank">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" src="../images/mediatekformationCR.jpg" alt="IHM Coach">
+                                <div class="card-body">
+                                    <p class="card-text">Acceder au Compte Rendu de l'application </p>
+                                </div>
+                            </div>
+                        </a>
                     </div>
-                    <div class="col-xs-12 col-sm-7">
-                        <!-- Partie gauche -->
-                        <div class="rubrique clearfix">
-                            <h2><span class="fa fa-comment"></span> En quelques mots...</h2>
-                            <p>
-                                J'ai 24 ans, j'habite en périphérie de Bayonne et je suis passionné 
-                                d'informatique et de nouvelles technologies. Je suis actuellement un
-                                BTS Services Informatiques aux Organisations ce qui m'a décidé à aller au
-                                delà de la passion, afin de faire de l'informatique et plus particulièrement
-                                du développement d'applications, mon métier&nbsp;!
-                            </p>
-                        </div>
-                        <div class="rubrique clearfix">
-                            <h2><span class="fa fa-graduation-cap"></span> Parcours scolaire</h2>
-                            <ul id="parcours" class="clearfix">
-                                <li>
-                                    <div class="date float-left">
-                                        <span class="fa fa-stop-circle"></span>&nbsp;2022
-                                    </div>
-                                    <div class="details float-right">
-                                        <h3>BTS SIO option SLAM (en cours...)</h3>
-                                        <p>
-                                            Brevet de Technicien Supérieur "Services Informatiques aux
-                                            Organisations", option "Solutions Logicielles et Applications
-                                            Métiers"
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date float-left">
-                                        <span class="fa fa-stop-circle"></span>&nbsp;2018
-                                    </div>
-                                    <div class="details float-right">
-                                        <h3>BTS CG </h3>
-                                        <p>
-                                            Brevet de Technicien Supérieur "Comptabilités et Gestions" 
-                                        </p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="date float-left">
-                                        <span class="fa fa-stop-circle"></span>&nbsp;2016
-                                    </div>
-                                    <div class="details float-right">
-                                        <h3>BAC STMG Spécialité Gestion Finance</h3>
-                                        <p>
-                                            Baccalauréat technologique STMG "Sciences et Technologies du Management et de la Gestion"
-                                            en spécialité Gestion Finance
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="rubrique clearfix">
-                            <h2><span class="fa fa-briefcase"></span> Expériences professionnelles</h2>
-                            <div class="experience clearfix">
-                                <div class="col-3">
-                                    <div class="lieu">Spirit Formation</div>
-                                    <div class="date">2021 (5 sem.)</div>
-                                </div>
-                                <div class="col-9">
-                                    <div class="profession">Mise à jour et référencement Web</div>
-                                    <div class="details">
-                                        Mise à jour des informations web via CMS et référencement des pages :
-                                        modifier la mise en forme des pages, faire ressortir les mots clés 
-                                        pertinant de la page, mettre à jour les méta-Tag et éclaircir le code
-                                        HTML du CMS. Intégration de formulaire Microsoft Form.
-                                    </div>
+                    <div class="col-md-4">
+                        <a href="https://github.com/Micro530/mediatekformation.git" target="_blank">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" src="../images/base-de-connaissances-github.png" alt="IHM Coach">
+                                <div class="card-body">
+                                    <p class="card-text">Acceder au versionning de l'application </p>
                                 </div>
                             </div>
-                            
-                        </div>
+                        </a>
                     </div>
-                    <div class="col-xs-12 col-sm-5">
-                        <!-- Partie droite -->
-                        <div class="rubrique clearfix">
-                            <h2><span class="fa fa-user"></span> Me contacter</h2>
-                            <div class="meContacter">
-                                <div class="details float-left">
-                                    <a href="mailto:quentin.stac@hotmail.com?subject=Contact depuis le CV en ligne"
-                                       title="Mail de Amélia Pilou">
-                                        <img class="contact-icon" src="../images/cv/mail-dreamstale47.png"
-                                             alt="Icone de mail"> Hotmail.com
-                                    </a>
+                    <div class="col-md-4">
+                        <a href="http://mediatekformation-env.eba-miykdqme.eu-west-3.elasticbeanstalk.com/index.php/" target="_blank">
+                            <div class="card mb-4 shadow-sm">
+                                <img class="card-img-top" src="../images/appliweb_mediatekformation.PNG" alt="IHM Coach">
+                                <div class="card-body">
+                                    <p class="card-text">Acceder à l'application </p>
                                 </div>
                             </div>
-                            <div class="meContacter">
-                                <div class="details float-left">
-                                    <a href="https://twitter.com/microcraft530"
-                                       title="Lien vers la page Twitter de @AmeliaPilou">
-                                        <img class="contact-icon" src="../images/cv/twitter-dreamstale71.png"
-                                             alt="Icone de Twitter"> Twitter
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="meContacter">
-                                <div class="details float-left">
-                                    <a href="https://www.linkedin.com/in/quentin-stachowiak-a54151126"
-                                       title="Lien vers le profil LinkedIn de Amélia Pilou">
-                                        <img class="contact-icon" src="../images/cv/linkedin-dreamstale45.png"
-                                             alt="Icone de LinkedIn"> LinkedIn
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="meContacter">
-                                <div class="details float-left">
-                                    <a href="https://github.com/micro530"
-                                       title="Lien vers le profil GitHub d'Amélia Pilou">
-                                        <img class="contact-icon" src="../images/cv/github2-dreamstale35.png"
-                                             alt="Icone de GitHub"> GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="langues" class="rubrique clearfix">
-                            <h2><span class="fa fa-flag"></span> Langue</h2>
-                            <div class="container">
-                                <div class="langue">Français</div>
-                                <div class="niveau">
-                                    <span class="badge badge-dark">A1</span>
-                                    <span class="badge badge-dark">A2</span>
-                                    <span class="badge badge-dark">B1</span>
-                                    <span class="badge badge-dark">B2</span>
-                                    <span class="badge badge-dark">C1</span>
-                                    <span class="badge badge-success">C2</span>
-                                </div>
-                            </div>
-                            <div class="container">
-                                <div class="langue">Anglais</div>
-                                <div class="niveau">
-                                    <span class="badge badge-dark">A1</span>
-                                    <span class="badge badge-dark">A2</span>
-                                    <span class="badge badge-success">B1</span>
-                                    <span class="badge badge-dark">B2</span>
-                                    <span class="badge badge-dark">C1</span>
-                                    <span class="badge badge-dark">C2</span>
-                                </div>
-                            </div>
-                            
-                        </div>
-                        <div id="competences" class="rubrique clearfix">
-                            <h2><span class="fa fa-wrench"></span> Compétences</h2>
-                            <div class="container">
-                                <div class="libelle">C#</div>
-                                <div class="classement classement4"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">Java</div>
-                                <div class="classement classement4"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">VBA</div>
-                                <div class="classement classement3"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">Python</div>
-                                <div class="classement classement4"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">SQL et utilisation SGBDR</div>
-                                <div class="classement classement4"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">Gestion de VM</div>
-                                <div class="classement classement3"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">Pack Office Microsoft</div>
-                                <div class="classement classement4"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">CMS</div>
-                                <div class="classement classement3"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">Language Web</div>
-                                <div class="classement classement3"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">Montage video</div>
-                                <div class="classement classement4"></div>
-                            </div>
-                            <div class="container">
-                                <div class="libelle">Outils 3D/graphique</div>
-                                <div class="classement classement2"></div>
-                            </div>
-                        </div>
-                        <div class="rubrique clearfix">
-                            <h2><span class="fa fa-music"></span> Passions</h2>
-                            <div class="passion">Survie en milieu naturel</div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div> <!-- Emplacement pour le contenu principal de la page -->
+        </div>
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <iframe width="800" height="450" src="https://www.youtube.com/embed/DvLGiuDNkL0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pied de page -->
         <footer>
             <div class="container">
                 <div class="row">
@@ -433,18 +286,5 @@
                 <p class="text-center" id="copyright">© Quentin Stachowiak 2021</p>
             </div>
         </footer>
-
-        <!-- Optional JavaScript; choose one of the two! -->
-
-        <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-
-        <!-- Option 2: Separate Popper and Bootstrap JS -->
-        <!--
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-        -->
     </body>
 </html>
