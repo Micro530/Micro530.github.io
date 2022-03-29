@@ -1,0 +1,2138 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mediatek86</name>
+    </assembly>
+    <members>
+        <member name="T:Mediatek86.controleur.Controle">
+            <summary>
+            Classe Controle
+            </summary>
+        </member>
+        <member name="F:Mediatek86.controleur.Controle.frmAuthentification">
+            <summary>
+            Instance du formulaire Authentifiation
+            </summary>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.#ctor">
+            <summary>
+            Ouverture de la fenêtre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.OuvertureFrmMediatek(System.String)">
+            <summary>
+            Permet d'ouvrir le formulaire mediatek
+            </summary>
+            <param name="service">le service de l'utilisateur connecté</param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllGenres">
+            <summary>
+            getter sur la liste des genres
+            </summary>
+            <returns>Collection d'objets Genre</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllLivres">
+            <summary>
+            getter sur la liste des livres
+            </summary>
+            <returns>Collection d'objets Livre</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllDvd">
+            <summary>
+            getter sur la liste des Dvd
+            </summary>
+            <returns>Collection d'objets dvd</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllRevues">
+            <summary>
+            getter sur la liste des revues
+            </summary>
+            <returns>Collection d'objets Revue</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllRayons">
+            <summary>
+            getter sur les rayons
+            </summary>
+            <returns>Collection d'objets Rayon</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllPublics">
+            <summary>
+            getter sur les publics
+            </summary>
+            <returns>Collection d'objets Public</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetExemplairesRevue(System.String)">
+            <summary>
+            récupère les exemplaires d'une revue
+            </summary>
+            <returns>Collection d'objets Exemplaire</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.CreerExemplaire(Mediatek86.metier.Exemplaire)">
+            <summary>
+            Crée un exemplaire d'une revue dans la bdd
+            </summary>
+            <param name="exemplaire">L'objet Exemplaire concerné</param>
+            <returns>True si la création a pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.SupprDocument(System.String)">
+            <summary>
+            Permet de supprimer le document envoyé
+            </summary>
+            <param name="id">id du document à supprimer</param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.ModifierLivre(Mediatek86.metier.Livre)">
+            <summary>
+            Pemret de modifier un livre
+            </summary>
+            <param name="livre"></param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.ModifierDvd(Mediatek86.metier.Dvd)">
+            <summary>
+            Pemret de modifier un dvd
+            </summary>
+            <param name="dvd"></param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.ModifierRevue(Mediatek86.metier.Revue)">
+            <summary>
+            Pemret de modifier une Revue
+            </summary>
+            <param name="revue"></param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.AjouterLivre(Mediatek86.metier.Livre)">
+            <summary>
+            Pemret d'ajouter un livre
+            </summary>
+            <param name="livre"></param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.AjouterDvd(Mediatek86.metier.Dvd)">
+            <summary>
+            Pemret d'ajouter un dvd
+            </summary>
+            <param name="dvd"></param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.AjouterRevue(Mediatek86.metier.Revue)">
+            <summary>
+            Pemret d'ajouter une Revue
+            </summary>
+            <param name="revue"></param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllCommandes(System.String)">
+            <summary>
+            Permet de récuparer toutes les commandes d'un Livre_Dvd
+            </summary>
+            <param name="idLivre_Dvd"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.OuvrirCommande(System.Object)">
+            <summary>
+            Ouvrir la nouvelle feunetre des commandes
+            </summary>
+            <param name="objet"></param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllSuivi">
+            <summary>
+            Retourne tous les suivis possibles
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.CreerCommandeLivreDvd(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            creer une commande de livre dvd
+            </summary>
+            <param name="commande"></param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.ModifierCommandeLivreDvd(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            Permet d'envoyer un commande livreDvd a modifier
+            </summary>
+            <param name="commande">commande a modifier</param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.SupprCommandeLivreDvd(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            Permet de suprimer une commande de Livre_Dvd
+            </summary>
+            <param name="commande">commande a supprimer</param>
+            <returns>si la suppression à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAllCommandesRevues(System.String)">
+            <summary>
+            récupère est retourne une liste de commandes par rapport a une id de revue
+            </summary>
+            <param name="idRevue">id recherché</param>
+            <returns>une liste de commandes</returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.CreerCommandeRevue(Mediatek86.metier.CommandeAbo)">
+            <summary>
+            Pemret de créer un commandes de revue
+            </summary>
+            <param name="commandeAbo">la commande a créer</param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.SupprAbonnement(System.String)">
+            <summary>
+            Permet de supprimer un abonnement
+            </summary>
+            <param name="idCommande">abonnement à supprimer</param>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.GetAbonnementMoinsTrenteJours">
+            <summary>
+            récupère et retourne les revus avec un abonnement de moins de 30 jours
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mediatek86.controleur.Controle.Authentification(System.String,System.String)">
+            <summary>
+            Méthode d'authentifiaction
+            </summary>
+            <param name="identifiant">l'identifiant</param>
+            <param name="pwd">le mot de passe</param>
+            <returns>le nom du service</returns>
+        </member>
+        <member name="T:Mediatek86.metier.Abonnement">
+            <summary>
+            Classe Abonnement
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Abonnement.id">
+            <summary>
+            id de l'abonnement
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Abonnement.dateFinAbonnement">
+            <summary>
+            date de fin d'abonnement
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Abonnement.idRevue">
+            <summary>
+            id de la revue
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Abonnement.#ctor(System.String,System.String,System.String)">
+            <summary>
+            constructeur de la classe abonnement
+            </summary>
+            <param name="id">id de l'abonnement</param>
+            <param name="dateFinAbonnement">date de fin d'abonnement</param>
+            <param name="idRevue">id de la revue</param>
+        </member>
+        <member name="P:Mediatek86.metier.Abonnement.Id">
+            <summary>
+            id de l'abonnement
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Abonnement.DateFinAbonnement">
+            <summary>
+            date de fin d'abonnement
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Abonnement.IdRevue">
+            <summary>
+            id de la revue
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.CommandeAbo">
+            <summary>
+            Classe abonnementAbo
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeAbo.dateCommande">
+            <summary>
+            date de la commande
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeAbo.montant">
+            <summary>
+            montant de la commande
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.CommandeAbo.#ctor(System.String,System.Double,System.String,System.String,System.String)">
+            <summary>
+            constructeur de la classe
+            </summary>
+            <param name="dateCommande">date de la commande</param>
+            <param name="montant">montant de la commande</param>
+            <param name="id">id de l'abonnement</param>
+            <param name="dateFinAbonnement">date de fin d'abonnement</param>
+            <param name="idRevue">id de la revue</param>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeAbo.DateCommande">
+            <summary>
+            date de la commande
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeAbo.Montant">
+            <summary>
+            montant de la commande
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.CommandeDoc">
+            <summary>
+            Classe commandeDoc
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeDoc.dateCommande">
+            <summary>
+            date de la commande
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeDoc.montant">
+            <summary>
+            montant de la commande
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.CommandeDoc.#ctor(System.String,System.Double,System.String,System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            constructeur de la classe
+            </summary>
+            <param name="dateCommande">date de la commande</param>
+            <param name="montant">montant de la commande</param>
+            <param name="id">id de l'abonnement</param>
+            <param name="nbExemplaire">nombre d'exemplaire dans la commande</param>
+            <param name="idLivreDvd">id du document</param>
+            <param name="idSuivi">id du suivi</param>
+            <param name="suivi">nom du suivi</param>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeDoc.DateCommande">
+            <summary>
+            date de la commande
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeDoc.Montant">
+            <summary>
+            montant de la commande
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.CommandeDocument">
+            <summary>
+            Classe commandeDocument
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeDocument.id">
+            <summary>
+            id de la commande
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeDocument.nbExemplaire">
+            <summary>
+            nombre d'exemplaire commandé
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeDocument.idLivreDvd">
+            <summary>
+            id du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeDocument.idSuivi">
+            <summary>
+            id du suivi 
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.CommandeDocument.suivi">
+            <summary>
+            libellé du suivi
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.CommandeDocument.#ctor(System.String,System.Int32,System.String,System.Int32,System.String)">
+            <summary>
+            constructeur de la classe
+            </summary>
+            <param name="id">id de la commande</param>
+            <param name="nbExemplaire">nombre d'exemplaire commandé</param>
+            <param name="idLivreDvd">id du document</param>
+            <param name="idSuivi">id du suivi </param>
+            <param name="suivi">libellé du suivi</param>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeDocument.Id">
+            <summary>
+            id du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeDocument.NbExemplaire">
+            <summary>
+            nombre d'exemplaire dans la commande
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeDocument.IdLivreDvd">
+            <summary>
+            id du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeDocument.IdSuivi">
+            <summary>
+            id du suivi 
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.CommandeDocument.Suivi">
+            <summary>
+            libellé du suivi
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.Dvd">
+            <summary>
+            Classe de DVD
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Dvd.duree">
+            <summary>
+            duree du dvd
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Dvd.realisateur">
+            <summary>
+            réalisateur du dvd
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Dvd.synopsis">
+            <summary>
+            synopsis du dvd
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Dvd.#ctor(System.String,System.String,System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            constructeur de la classe
+            </summary>
+            <param name="id">id du document</param>
+            <param name="titre">titre du document</param>
+            <param name="image">image du document</param>
+            <param name="duree">duree du dvd</param>
+            <param name="realisateur">réalisateur du dvd</param>
+            <param name="synopsis">synopsis du dvd</param>
+            <param name="idGenre">idGenre du document</param>
+            <param name="genre">Genre du document</param>
+            <param name="idPublic">idpublic du document</param>
+            <param name="lePublic">le public du document</param>
+            <param name="idRayon">id du rayon du document</param>
+            <param name="rayon">rayon du document</param>
+        </member>
+        <member name="P:Mediatek86.metier.Dvd.Duree">
+            <summary>
+            durée du dvd
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Dvd.Realisateur">
+            <summary>
+            réalisateur du dvd
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Dvd.Synopsis">
+            <summary>
+            synopsis du dvd
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.Etat">
+            <summary>
+            Classe métier Etat
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Etat.#ctor(System.String,System.String)">
+            <summary>
+            Constructeur de la classe
+            </summary>
+            <param name="id">id de l'état</param>
+            <param name="libelle">nom de l'état</param>
+        </member>
+        <member name="P:Mediatek86.metier.Etat.Id">
+            <summary>
+            id de l'état
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Etat.Libelle">
+            <summary>
+            nom de l'état
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.LivreDvd">
+            <summary>
+            Classe LivreDvd
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.LivreDvd.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            constructeur d'un livreDvd
+            </summary>
+            <param name="id">id du document</param>
+            <param name="titre">titre du document</param>
+            <param name="image">image du document</param>
+            <param name="idGenre">idGenre du document</param>
+            <param name="genre">Genre du document</param>
+            <param name="idPublic">idpublic du document</param>
+            <param name="lePublic">le public du document</param>
+            <param name="idRayon">id du rayon du document</param>
+            <param name="rayon">rayon du document</param>
+        </member>
+        <member name="T:Mediatek86.metier.Public">
+            <summary>
+            Classe Public
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Public.#ctor(System.String,System.String)">
+            <summary>
+            Constructeur de la classe Genre
+            </summary>
+            <param name="id">id de la catégorie</param>
+            <param name="libelle">libellé de la catégorie</param>
+        </member>
+        <member name="T:Mediatek86.metier.Rayon">
+            <summary>
+            Classe Rayon
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Rayon.#ctor(System.String,System.String)">
+            <summary>
+            Constructeur de la classe Genre
+            </summary>
+            <param name="id">id de la catégorie</param>
+            <param name="libelle">libellé de la catégorie</param>
+        </member>
+        <member name="T:Mediatek86.metier.Suivi">
+            <summary>
+            Classe suivi
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Suivi.id">
+            <summary>
+            id du suivi
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Suivi.libelle">
+            <summary>
+            libelle du suivi
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Suivi.#ctor(System.Int32,System.String)">
+            <summary>
+            Constructeur de la classe
+            </summary>
+            <param name="id"></param>
+            <param name="libelle"></param>
+        </member>
+        <member name="P:Mediatek86.metier.Suivi.Id">
+            <summary>
+            id du suivi
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Suivi.Libelle">
+            <summary>
+            Libelle du suivi
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Suivi.ToString">
+            <summary>
+            Pour l'affichage dans les combo
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Mediatek86.metier.Categorie">
+            <summary>
+            classe categorie
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Categorie.id">
+            <summary>
+            id de la catégorie
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Categorie.libelle">
+            <summary>
+            libelle de la catégorie
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Categorie.#ctor(System.String,System.String)">
+            <summary>
+            constructeur de la classe
+            </summary>
+            <param name="id">id de la catégorie</param>
+            <param name="libelle">libelle de la catégorie</param>
+        </member>
+        <member name="P:Mediatek86.metier.Categorie.Id">
+            <summary>
+            id de la catégorie
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Categorie.Libelle">
+            <summary>
+            libelle de la catégorie
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Categorie.ToString">
+            <summary>
+            Récupération du libellé pour l'affichage dans les combos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Mediatek86.metier.Document">
+            <summary>
+            Classe Document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.id">
+            <summary>
+            id du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.titre">
+            <summary>
+            titre du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.image">
+            <summary>
+            image du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.idGenre">
+            <summary>
+            idGenre du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.genre">
+            <summary>
+            Genre du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.idPublic">
+            <summary>
+            idpublic du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.lePublic">
+            <summary>
+            le public du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.idRayon">
+            <summary>
+            id du rayon du document
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Document.rayon">
+            <summary>
+            rayon du document
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Document.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            constructeur du document
+            </summary>
+            <param name="id">id du document</param>
+            <param name="titre">titre du document</param>
+            <param name="image">image du document</param>
+            <param name="idGenre">idGenre du document</param>
+            <param name="genre">Genre du document</param>
+            <param name="idPublic">idpublic du document</param>
+            <param name="lePublic">le public du document</param>
+            <param name="idRayon">id du rayon du document</param>
+            <param name="rayon">rayon du document</param>
+        </member>
+        <member name="P:Mediatek86.metier.Document.Id">
+            <summary>
+            id du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Document.Titre">
+            <summary>
+            titre du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Document.Image">
+            <summary>
+            image du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Document.IdGenre">
+            <summary>
+            idGenre du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Document.Genre">
+            <summary>
+            Genre du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Document.IdPublic">
+            <summary>
+            idpublic du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Document.Public">
+            <summary>
+            le public du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Document.IdRayon">
+            <summary>
+            id du rayon du document
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Document.Rayon">
+            <summary>
+            rayon du document
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.Livre">
+            <summary>
+            Classe de livreDvd
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Livre.isbn">
+            <summary>
+            isbn du livre
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Livre.auteur">
+            <summary>
+            auteur di livre
+            </summary>
+        </member>
+        <member name="F:Mediatek86.metier.Livre.collection">
+            <summary>
+            collection du livre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Livre.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            Constructeur de la classe 
+            </summary>
+            <param name="id">id du document</param>
+            <param name="titre">titre du document</param>
+            <param name="image">image du document</param>
+            <param name="isbn">isbn du livre</param>
+            <param name="auteur">auteru du livre</param>
+            <param name="collection">collection du livre</param>
+            <param name="idGenre">idGenre du document</param>
+            <param name="genre">Genre du document</param>
+            <param name="idPublic">idpublic du document</param>
+            <param name="lePublic">le public du document</param>
+            <param name="idRayon">id du rayon du document</param>
+            <param name="rayon">rayon du document</param>
+        </member>
+        <member name="P:Mediatek86.metier.Livre.Isbn">
+            <summary>
+            isbn du livre
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Livre.Auteur">
+            <summary>
+            auteur du livre
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Livre.Collection">
+            <summary>
+            collection du livre
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.Exemplaire">
+            <summary>
+            Classe Exemplaire
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Exemplaire.#ctor(System.Int32,System.DateTime,System.String,System.String,System.String)">
+            <summary>
+            Constructeur de la classe
+            </summary>
+            <param name="numero">numéro d'exemplaire</param>
+            <param name="dateAchat">date achet de l'exemplaire</param>
+            <param name="photo">photo de l'exemplaire</param>
+            <param name="idEtat">id de l'état de l'exemplaire</param>
+            <param name="idDocument">id de document </param>
+        </member>
+        <member name="P:Mediatek86.metier.Exemplaire.Numero">
+            <summary>
+            numéro d'exemplaire
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Exemplaire.Photo">
+            <summary>
+            photo de l'exemplaire
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Exemplaire.DateAchat">
+            <summary>
+            date achet de l'exemplaire
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Exemplaire.IdEtat">
+            <summary>
+            id de l'état de l'exemplaire
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Exemplaire.IdDocument">
+            <summary>
+            id de document 
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.Revue">
+            <summary>
+            Classe Renue
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Revue.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.String,System.Int32)">
+            <summary>
+            Constructeur d'une revue
+            </summary>
+            <param name="id">id du document</param>
+            <param name="titre">titre du document</param>
+            <param name="image">image du document</param>
+            <param name="idGenre">idGenre du document</param>
+            <param name="genre">Genre du document</param>
+            <param name="idPublic">idpublic du document</param>
+            <param name="lePublic">le public du document</param>
+            <param name="idRayon">id du rayon du document</param>
+            <param name="rayon">rayon du document</param>
+            <param name="empruntable">si la revue est empruntable</param>
+            <param name="periodicite">périodicité</param>
+            <param name="delaiMiseADispo">délai de mise à disposition</param>
+        </member>
+        <member name="P:Mediatek86.metier.Revue.Periodicite">
+            <summary>
+            Périodicité
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Revue.Empruntable">
+            <summary>
+            si la revue est empruntable
+            </summary>
+        </member>
+        <member name="P:Mediatek86.metier.Revue.DelaiMiseADispo">
+            <summary>
+            délai de mise à disposition
+            </summary>
+        </member>
+        <member name="T:Mediatek86.metier.Genre">
+            <summary>
+            Classe Genre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.metier.Genre.#ctor(System.String,System.String)">
+            <summary>
+            Constructeur de la classe Genre
+            </summary>
+            <param name="id">id de la catégorie</param>
+            <param name="libelle">libellé de la catégorie</param>
+        </member>
+        <member name="T:Mediatek86.modele.Dao">
+            <summary>
+            Classe Dao
+            </summary>
+        </member>
+        <member name="F:Mediatek86.modele.Dao.server">
+            <summary>
+            Adresse du server
+            </summary>
+        </member>
+        <member name="F:Mediatek86.modele.Dao.userid">
+            <summary>
+            nom du user
+            </summary>
+        </member>
+        <member name="F:Mediatek86.modele.Dao.password">
+            <summary>
+            mot de passe du user
+            </summary>
+        </member>
+        <member name="F:Mediatek86.modele.Dao.database">
+            <summary>
+            nom de la bdd
+            </summary>
+        </member>
+        <member name="F:Mediatek86.modele.Dao.connectionString">
+            <summary>
+            Chaine de connexion
+            </summary>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllGenres">
+            <summary>
+            Retourne tous les genres à partir de la BDD
+            </summary>
+            <returns>Liste d'objets Genre</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllRayons">
+            <summary>
+            Retourne tous les rayons à partir de la BDD
+            </summary>
+            <returns>Collection d'objets Rayon</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllPublics">
+            <summary>
+            Retourne toutes les catégories de public à partir de la BDD
+            </summary>
+            <returns>Collection d'objets Public</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllLivres">
+            <summary>
+            Retourne toutes les livres à partir de la BDD
+            </summary>
+            <returns>Liste d'objets Livre</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllSuivi">
+            <summary>
+            Retourne toutes les etats de suivis
+            </summary>
+            <returns>Liste d'objets Suivi</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllCommandes(System.String)">
+            <summary>
+            Retourne toutes les commande à partir de l'id d'un livre_dvd
+            </summary>
+            <returns>Liste d'objets Commande</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllCommandesRevues(System.String)">
+            <summary>
+            Retourne toutes les commande à partir de l'id d'une revue
+            </summary>
+            <returns>Liste d'objets Commande</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllDvd">
+            <summary>
+            Retourne toutes les dvd à partir de la BDD
+            </summary>
+            <returns>Liste d'objets Dvd</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAllRevues">
+            <summary>
+            Retourne toutes les revues à partir de la BDD
+            </summary>
+            <returns>Liste d'objets Revue</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetExemplairesRevue(System.String)">
+            <summary>
+            Retourne les exemplaires d'une revue
+            </summary>
+            <returns>Liste d'objets Exemplaire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetAbonnementMoinsTrenteJours">
+            <summary>
+            Retourne les revues avec un abonnement de moins de 30 jours
+            </summary>
+            <returns>Liste d'objets Revues</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.Authetification(System.String,System.String)">
+            <summary>
+            Retourne le service de l'utilisateur
+            </summary>
+            <returns>service de l'utilisteur</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.GetStringSha256Hash(System.String)">
+            <summary>
+            Transformation d'une chaîne avec SHA256 (pour le pwd)
+            </summary>
+            <param name="text"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.CreerExemplaire(Mediatek86.metier.Exemplaire)">
+            <summary>
+            ecriture d'un exemplaire en base de données
+            </summary>
+            <param name="exemplaire"></param>
+            <returns>true si l'insertion a pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.CreerCommande(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            créer une commande
+            </summary>
+            <param name="commande"></param>
+            <returns>id de la commande créer</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.CreerCommandeLivreDvd(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            créer une commande de document
+            </summary>
+            <param name="commande"></param>
+            <returns>true si l'insertion a pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.CreerCommandeRevue(Mediatek86.metier.CommandeAbo)">
+            <summary>
+            créer une commande de document
+            </summary>
+            <param name="commandeAbo"></param>
+            <returns>true si l'insertion a pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.ModifierCommande(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            Modification d'un document
+            </summary>
+            <param name="commande">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.ModifierCommandeLivreDvd(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            Modification d'un document
+            </summary>
+            <param name="commande">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.ModifierDocument(Mediatek86.metier.Document)">
+            <summary>
+            Modification d'un document
+            </summary>
+            <param name="document">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.ModifierLivre(Mediatek86.metier.Livre)">
+            <summary>
+            Modification d'un livre
+            </summary>
+            <param name="livre">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.ModifierDvd(Mediatek86.metier.Dvd)">
+            <summary>
+            Modification d'un dvd
+            </summary>
+            <param name="dvd">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.ModifierRevue(Mediatek86.metier.Revue)">
+            <summary>
+            Modification d'un livre
+            </summary>
+            <param name="revue">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.AjouterDocument(Mediatek86.metier.Document)">
+            <summary>
+            ajout d'un document
+            </summary>
+            <param name="document">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.AjouterLivreDvd(System.String)">
+            <summary>
+            ajout d'un livre_dvd
+            </summary>
+            <param name="id">id a ajouter</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.AjouterLivre(Mediatek86.metier.Livre)">
+            <summary>
+            Modification d'un livre
+            </summary>
+            <param name="livre">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.SupprDocument(System.String)">
+            <summary>
+            suppression d'un element dans la table document
+            </summary>
+            <param name="id">id de l'element à supprimer</param>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.SupprCommandeLivreDvd(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            suppression d'une commande LivreDvd
+            </summary>
+            <param name="commande">commande à supprimer</param>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.SupprAbonnement(System.String)">
+            <summary>
+            suppression d'une commande 
+            </summary>
+            <param name="idCommande">commande à supprimer</param>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.AjouterDvd(Mediatek86.metier.Dvd)">
+            <summary>
+            Modification d'un dvd
+            </summary>
+            <param name="dvd">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="M:Mediatek86.modele.Dao.AjouterRevue(Mediatek86.metier.Revue)">
+            <summary>
+            Modification d'un livre
+            </summary>
+            <param name="revue">document à modifier</param>
+            <returns>true si la modification à pu se faire</returns>
+        </member>
+        <member name="T:Mediatek86.bdd.BddMySql">
+            <summary>
+            Classe BddMySql
+            </summary>
+        </member>
+        <member name="F:Mediatek86.bdd.BddMySql.instance">
+            <summary>
+            Unique instance de la classe
+            </summary>
+        </member>
+        <member name="F:Mediatek86.bdd.BddMySql.connection">
+            <summary>
+            objet de connexion à la BDD à partir d'une chaîne de connexion
+            </summary>
+        </member>
+        <member name="F:Mediatek86.bdd.BddMySql.reader">
+            <summary>
+            objet contenant le résultat d'une requête "select" (curseur)
+            </summary>
+        </member>
+        <member name="M:Mediatek86.bdd.BddMySql.#ctor(System.String)">
+            <summary>
+            Constructeur privé pour créer la connexion à la BDD et l'ouvrir
+            </summary>
+            <param name="stringConnect">chaine de connexion</param>
+        </member>
+        <member name="M:Mediatek86.bdd.BddMySql.GetInstance(System.String)">
+            <summary>
+            Crée une instance unique de la classe
+            </summary>
+            <param name="stringConnect">chaine de connexion</param>
+            <returns>instance unique de la classe</returns>
+        </member>
+        <member name="M:Mediatek86.bdd.BddMySql.ReqSelect(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Exécute une requête type "select" et valorise le curseur
+            </summary>
+            <param name="stringQuery"> la requete</param>
+            <param name="parameters">les parametres</param>
+        </member>
+        <member name="M:Mediatek86.bdd.BddMySql.Read">
+            <summary>
+            Tente de lire la ligne suivante du curseur
+            </summary>
+            <returns>false si fin de curseur atteinte</returns>
+        </member>
+        <member name="M:Mediatek86.bdd.BddMySql.Field(System.String)">
+            <summary>
+            Retourne le contenu d'un champ dont le nom est passé en paramètre
+            </summary>
+            <param name="nameField">nom du champ</param>
+            <returns>valeur du champ</returns>
+        </member>
+        <member name="M:Mediatek86.bdd.BddMySql.ReqUpdate(System.String,System.Collections.Generic.Dictionary{System.String,System.Object})">
+            <summary>
+            Exécution d'une requête autre que "select"
+            </summary>
+            <param name="stringQuery">requête autre que select</param>
+            <param name="parameters">dictionnire contenant les parametres</param>
+        </member>
+        <member name="M:Mediatek86.bdd.BddMySql.Close">
+            <summary>
+            Fermeture du curseur
+            </summary>
+        </member>
+        <member name="M:Mediatek86.bdd.BddMySql.ErreurGraveBddNonAccessible(System.Exception)">
+            <summary>
+            Pas d'accès à la BDD : arrêt de l'application
+            </summary>
+        </member>
+        <member name="T:Mediatek86.vue.FrmAuthentification">
+            <summary>
+            Formulaire FrmAuthentification
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmAuthentification.controle">
+            <summary>
+            Instance du controle
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmAuthentification.nomService">
+            <summary>
+            Nom du service
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmAuthentification.#ctor(Mediatek86.controleur.Controle)">
+            <summary>
+            Constructeur du formulaire
+            </summary>
+            <param name="controle"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmAuthentification.BtnConnexion_Click(System.Object,System.EventArgs)">
+            <summary>
+            Évenement du clique sur le BtnConnexion
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Mediatek86.vue.FrmAuthentification.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmAuthentification.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmAuthentification.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Mediatek86.vue.FrmCommandes">
+            <summary>
+            Formulaire FrmCommande
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmCommandes.usrcCommandeLivre">
+            <summary>
+            Instance du UserControl usrcCommandeLivre
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmCommandes.unObjet">
+            <summary>
+            L'objet récupéré
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmCommandes.controle">
+            <summary>
+            L'instance du controleur
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.#ctor(System.Object,Mediatek86.controleur.Controle)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="unObjet">Objet de type (Livre, DVD ou Revue)</param>
+            <param name="controle">le controleur appelant</param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.Commandes_Load(System.Object,System.EventArgs)">
+            <summary>
+            Lors du chargement du formaulaire
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.ConsUsrcCommandeLivre">
+            <summary>
+            Permet de construire et d'afficher le UserControle UsrcCommande
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.GetAllCommandes(System.String)">
+            <summary>
+            Permet de récupérer et d'envoyer le liste de commande par id de livre_dvd
+            </summary>
+            <param name="idLivre_Dvd">id recherché dans les commandes</param>
+            <returns>liste des commandes</returns>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.GetAllSuivi">
+            <summary>
+            Permet de récupérer et denvoyer la liste des tyoe de suivi
+            </summary>
+            <returns>liste des suivis</returns>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.ModifierAjouterCommande(System.Object,System.Boolean)">
+            <summary>
+            Méthode de modification ou d'ajout du commande
+            </summary>
+            <param name="commande">la commande soit type Abo soit Doc</param>
+            <param name="ajoutEnCours">Si le boulean ajout est à true</param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.FermerVueCommande">
+            <summary>
+            Permet de fermé cette fenetre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.SupprCommandeLivreDvd(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            Méthode de suppression du commande de livre_dvd
+            </summary>
+            <param name="commande">commande à supprimer</param>
+            <returns>si la commande a bien été supprimé</returns>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.GetAllCommandesRevues(System.String)">
+            <summary>
+            Permet de récupérer et d'envoyer toutes les commandes de revus depuis un id
+            </summary>
+            <param name="idRevue">id de la revue</param>
+            <returns>une liste de commandes</returns>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.GetExemplairesRevue(System.String)">
+            <summary>
+            Permet de récupérer et d'envoyer tous les exemplaires ayant cette id
+            </summary>
+            <param name="idDocument">id du cocument recherché</param>
+            <returns>une liste de d'exmplaires</returns>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.SupprAbonnement(System.String)">
+            <summary>
+            Permet de supprimer un abonnement
+            </summary>
+            <param name="idCommande">abonnement a supprimer</param>
+        </member>
+        <member name="F:Mediatek86.vue.FrmCommandes.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmCommandes.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:Mediatek86.vue.ControleUtilisateur.UsrcCommande">
+            <summary>
+            UserControle UsrcCommande
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.#ctor(Mediatek86.vue.FrmCommandes,System.Object)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="frm">formaulaire commande appelant</param>
+            <param name="objet">objet soit (Livre, DVD, Revue)</param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.Init">
+            <summary>
+            Méthode initialisant le traitement pour gérer les pages
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.PreparerComboSuivi">
+            <summary>
+            Permet de remplir le combo suivi
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.RemplirDgvListCommande(System.Collections.Generic.List{Mediatek86.metier.CommandeDoc})">
+            <summary>
+            Remplir le dataGridView des commandes
+            </summary>
+            <param name="commandes"> les commandes a insérer</param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.RemplirDgvListCommandeAbo(System.Collections.Generic.List{Mediatek86.metier.CommandeAbo})">
+            <summary>
+            Remplir le dataGridView des commandes d'abonnement
+            </summary>
+            <param name="commandesAbo"> les commandes a insérer</param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.DgvListCommande_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evenement suis  a une changement de selection dans le datagridView
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.AfficheCommandeInfos(Mediatek86.metier.CommandeDoc)">
+            <summary>
+            Permet de remplir les champs conportant les informations de la commandes selectionné pouyr une livre/dvd
+            </summary>
+            <param name="commande">la commande selectionné</param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.AfficheCommandeInfos(Mediatek86.metier.CommandeAbo)">
+            <summary>
+            Permet de remplir les champs de la commande slectionné pour una abonement
+            </summary>
+            <param name="commande">la commande selectionné</param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.VideCommandeInfos">
+            <summary>
+            Permet de vider les chmaps des informations de la commande selectionné
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.BtnAjoutCommandeLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement lors du clique sur le btnAjoutCommande
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.BtnAnnulerModif_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors du clique sur le btnAnuulerModif
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.BtnValiderModif_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors du clique sur le btnValideModif
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.ConversionDateBdd(System.DateTime)">
+            <summary>
+            Permet de convertir la date en version française en version anglaise avec la syntaxe exacte de la base de données
+            </summary>
+            <param name="datePrestation">Date a convertir</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.BtnModifierCommandeLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors du clique su le btnModiferCommande
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.BtnRetourDoc_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors du cilque su le btnRetourDoc
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.BtnSupprimerCommandeLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors du clique sur le btnSupprimerCommande
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.VerifRevueCommande(System.Collections.Generic.List{Mediatek86.metier.Exemplaire})">
+            <summary>
+            evenement lors du clique sur le btnVerifRevueCommande
+            </summary>
+            <param name="lesExemplaires">les exemplaire de la revus selectionné</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.ParutionDansAbonnement(System.DateTime,System.DateTime,System.DateTime)">
+            <summary>
+            Méthode permettant de retrouner vrai sur la date de parution est entre les deux autres dates
+            </summary>
+            <param name="dateCommande">date de la commande</param>
+            <param name="dateFinAbonnement">date de la fin d'abonnement</param>
+            <param name="dateParution">date d'achat</param>
+            <returns></returns>
+        </member>
+        <member name="F:Mediatek86.vue.ControleUtilisateur.UsrcCommande.components">
+            <summary> 
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.Dispose(System.Boolean)">
+            <summary> 
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:Mediatek86.vue.ControleUtilisateur.UsrcCommande.InitializeComponent">
+            <summary> 
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas 
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="T:Mediatek86.vue.FrmMediatek">
+            <summary>
+            Formulaire FrmMediatek
+            </summary>
+            <summary>
+            Formulaire FrmMediatek
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.controle">
+            <summary>
+            Instance du controle
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.ETATNEUF">
+            <summary>
+            Code etat neuf
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.pathC">
+            <summary>
+            Pathde la racine des photos
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgLivresListe">
+            <summary>
+            BindingSource de la liste des livres
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgDvdListe">
+            <summary>
+            BindingSource de la liste des livreDvd
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgGenres">
+            <summary>
+            BindingSource de la liste des Genre
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgGenresChoix">
+            <summary>
+            BindingSource de la liste des GenreChoix
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgPublics">
+            <summary>
+            BindingSource de la liste des publics
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgPublicsChoix">
+            <summary>
+            BindingSource de la liste des public choix
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgRayons">
+            <summary>
+            BindingSource de la liste des rayons
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgRayonsChoix">
+            <summary>
+            BindingSource de la liste des rayons choix
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgRevuesListe">
+            <summary>
+            BindingSource de la liste des revues
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.bdgExemplairesListe">
+            <summary>
+            BindingSource de la liste des exemplaires
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.lesLivres">
+            <summary>
+            liste des livres
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.lesDvd">
+            <summary>
+            liste des dvd
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.lesRevues">
+            <summary>
+            liste des revues
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.lesExemplaires">
+            <summary>
+            listes des exemplaires
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.lesGenres">
+            <summary>
+            liste des genres
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.lesPublics">
+            <summary>
+            liste des publics
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.lesRayons">
+            <summary>
+            liste des rayons
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.ajoutEnCours">
+            <summary>
+            permet de connaitre si une modification est en cours
+            </summary>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.service">
+            <summary>
+            le nom du service
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.#ctor(Mediatek86.controleur.Controle,System.String)">
+            <summary>
+            Constructeur
+            </summary>
+            <param name="controle">le controle appelant</param>
+            <param name="service">le nom du service</param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.MessageRevuesMoinsTrenteJours(System.Collections.Generic.List{Mediatek86.metier.Revue})">
+            <summary>
+            Permet de créer le message si des abonnement sont à moins de 30 jours lors de l'ouverture de l'application
+            </summary>
+            <param name="lesRevues">la liste des revue qui ont moins de 30 jours</param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.RemplirComboCategorie(System.Collections.Generic.List{Mediatek86.metier.Categorie},System.Windows.Forms.BindingSource,System.Windows.Forms.ComboBox)">
+            <summary>
+            Rempli un des 3 combo (genre, public, rayon)
+            </summary>
+            <param name="lesCategories"></param>
+            <param name="bdg"></param>
+            <param name="cbx"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.ClickBtnSupprConfirmation(System.String,System.String,System.String)">
+            <summary>
+            Méthode permettant de gérer la demande de confirmation de suppression
+            </summary>
+            <param name="message">element du message a rajouter pou personnaliser</param>
+            <param name="titre">titre de l'element</param>
+            <param name="id">id de l'element</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.ModificationAjoutDocument(System.Object)">
+            <summary>
+            Méthode permettant de moddifier un document
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.ConversionIDBdd(System.Int32)">
+            <summary>
+            Permet de convertire le format de l'id en un format compatible avec ceux utilisé dans la BDD 
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.TabRevues_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Ouverture de l'onglet Revues : 
+            appel des méthodes pour remplir le datagrid des revues et des combos (genre, rayon, public)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.RemplirRevuesListe(System.Collections.Generic.List{Mediatek86.metier.Revue})">
+            <summary>
+            Remplit le dategrid avec la liste reçue en paramètre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnRevuesNumRecherche_Click(System.Object,System.EventArgs)">
+            <summary>
+            Recherche et affichage de la revue dont on a saisi le numéro.
+            Si non trouvé, affichage d'un MessageBox.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.TxbRevuesTitreRecherche_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Recherche et affichage des revues dont le titre matche acec la saisie.
+            Cette procédure est exécutée à chaque ajout ou suppression de caractère
+            dans le textBox de saisie.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.AfficheRevuesInfos(Mediatek86.metier.Revue)">
+            <summary>
+            Affichage des informations de la revue sélectionné
+            </summary>
+            <param name="revue"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.VideRevuesInfos">
+            <summary>
+            Vide les zones d'affichage des informations de la reuve
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxRevuesGenres_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur le genre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxRevuesPublics_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur la catégorie de public
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxRevuesRayons_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur le rayon
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.DgvRevuesListe_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sur la sélection d'une ligne ou cellule dans le grid
+            affichage des informations de la revue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnRevuesAnnulPublics_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des revues
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnRevuesAnnulRayons_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des revues
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnRevuesAnnulGenres_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des revues
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.RemplirRevuesListeComplete(System.Collections.Generic.List{Mediatek86.metier.Revue})">
+            <summary>
+            Affichage de la liste complète des revues
+            et annulation de toutes les recherches et filtres
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.VideRevuesZones">
+            <summary>
+            vide les zones de recherche et de filtre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.DgvRevuesListe_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            Tri sur les colonnes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnSupprRevues_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement lors du clique sur le btnSupprRevues
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnModifierRevue_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement lors du clique sur le btnModifierRevue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnValideModifRevue_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors du clique sur le btnValideModifRevue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnAnnulerRevue_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors du clique sur le btnAnnulerRevue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnAjouterRevue_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors de l'ajout d'une revue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnAccederCommandeRevue_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement lors du clique sur le btnAccederCommandeRevue
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.TabLivres_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Ouverture de l'onglet Livres : 
+            appel des méthodes pour remplir le datagrid des livres et des combos (genre, rayon, public)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.RemplirLivresListe(System.Collections.Generic.List{Mediatek86.metier.Livre})">
+            <summary>
+            Remplit le dategrid avec la liste reçue en paramètre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnLivresNumRecherche_Click(System.Object,System.EventArgs)">
+            <summary>
+            Recherche et affichage du livre dont on a saisi le numéro.
+            Si non trouvé, affichage d'un MessageBox.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.TxbLivresTitreRecherche_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Recherche et affichage des livres dont le titre matche acec la saisie.
+            Cette procédure est exécutée à chaque ajout ou suppression de caractère
+            dans le textBox de saisie.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.AfficheLivresInfos(Mediatek86.metier.Livre)">
+            <summary>
+            Affichage des informations du livre sélectionné
+            </summary>
+            <param name="livre"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.VideLivresInfos">
+            <summary>
+            Vide les zones d'affichage des informations du livre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxLivresGenres_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur le genre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxLivresPublics_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur la catégorie de public
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxLivresRayons_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur le rayon
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.DgvLivresListe_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sur la sélection d'une ligne ou cellule dans le grid
+            affichage des informations du livre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnLivresAnnulPublics_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des livres
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnLivresAnnulRayons_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des livres
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnLivresAnnulGenres_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des livres
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.RemplirLivresListeComplete(System.Collections.Generic.List{Mediatek86.metier.Livre})">
+            <summary>
+            Affichage de la liste complète des livres
+            et annulation de toutes les recherches et filtres
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.VideLivresZones">
+            <summary>
+            vide les zones de recherche et de filtre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.DgvLivresListe_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            Tri sur les colonnes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnSupprLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement lors du clique sur le btnSupprLivre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnValiderLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement lors du clique sur le btnValiderLivre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnAnnulerLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors de l'annulation des modifications
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnModifierLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement lors du clique sur le btnModifierLivre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnAjouterLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors de l'ajout d'un livre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnCommandeLivre_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement du clique sur le btnCommandeLivre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.TabDvd_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Ouverture de l'onglet Dvds : 
+            appel des méthodes pour remplir le datagrid des dvd et des combos (genre, rayon, public)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.RemplirDvdListe(System.Collections.Generic.List{Mediatek86.metier.Dvd})">
+            <summary>
+            Remplit le dategrid avec la liste reçue en paramètre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnDvdNumRecherche_Click(System.Object,System.EventArgs)">
+            <summary>
+            Recherche et affichage du Dvd dont on a saisi le numéro.
+            Si non trouvé, affichage d'un MessageBox.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.TxbDvdTitreRecherche_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Recherche et affichage des Dvd dont le titre matche acec la saisie.
+            Cette procédure est exécutée à chaque ajout ou suppression de caractère
+            dans le textBox de saisie.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.AfficheDvdInfos(Mediatek86.metier.Dvd)">
+            <summary>
+            Affichage des informations du dvd sélectionné
+            </summary>
+            <param name="dvd"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.VideDvdInfos">
+            <summary>
+            Vide les zones d'affichage des informations du dvd
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxDvdGenres_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur le genre
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxDvdPublics_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur la catégorie de public
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.CbxDvdRayons_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Filtre sur le rayon
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.DgvDvdListe_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sur la sélection d'une ligne ou cellule dans le grid
+            affichage des informations du dvd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnDvdAnnulPublics_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des Dvd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnDvdAnnulRayons_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des Dvd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnDvdAnnulGenres_Click(System.Object,System.EventArgs)">
+            <summary>
+            Sur le clic du bouton d'annulation, affichage de la liste complète des Dvd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.RemplirDvdListeComplete(System.Collections.Generic.List{Mediatek86.metier.Dvd})">
+            <summary>
+            Affichage de la liste complète des Dvd
+            et annulation de toutes les recherches et filtres
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.VideDvdZones">
+            <summary>
+            vide les zones de recherche et de filtre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.DgvDvdListe_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            Tri sur les colonnes
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnSupprDvd_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evenement lors du clique sur le btnSupprDvd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnModifierDvd_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement clique sur le btnModifierDvd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnValiderModifDvd_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement clique sur le btnValideModifierDvd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnAnnulerDvd_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement clique btnAnnuler
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnAjouterDvd_Click(System.Object,System.EventArgs)">
+            <summary>
+            evenement lors de l'ajout d'un dvd
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnActiverCommandeDvd_click(System.Object,System.EventArgs)">
+            <summary>
+            Evement lors du clique sur le btnAcederCommandeDVD
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.TabReceptionRevue_Enter(System.Object,System.EventArgs)">
+            <summary>
+            Ouverture de l'onglet : blocage en saisie des champs de saisie des infos de l'exemplaire
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.RemplirReceptionExemplairesListe(System.Collections.Generic.List{Mediatek86.metier.Exemplaire})">
+            <summary>
+            Remplit le dategrid avec la liste reçue en paramètre
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnReceptionRechercher_Click(System.Object,System.EventArgs)">
+            <summary>
+            Recherche d'un numéro de revue et affiche ses informations
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.TxbReceptionRevueNumero_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Si le numéro de revue est modifié, la zone de l'exemplaire est vidée et inactive
+            les informations de la revue son aussi effacées
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.AfficheReceptionRevueInfos(Mediatek86.metier.Revue)">
+            <summary>
+            Affichage des informations de la revue sélectionnée et les exemplaires
+            </summary>
+            <param name="revue"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.VideReceptionRevueInfos">
+            <summary>
+            Vide les zones d'affchage des informations de la revue
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.VideReceptionExemplaireInfos">
+            <summary>
+            Vide les zones d'affichage des informations de l'exemplaire
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.AccesReceptionExemplaireGroupBox(System.Boolean)">
+            <summary>
+            Permet ou interdit l'accès à la gestion de la réception d'un exemplaire
+            et vide les objets graphiques
+            </summary>
+            <param name="acces"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnReceptionExemplaireImage_Click(System.Object,System.EventArgs)">
+            <summary>
+            Recherche image sur disque (pour l'exemplaire)
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.BtnReceptionExemplaireValider_Click(System.Object,System.EventArgs)">
+            <summary>
+            Enregistrement du nouvel exemplaire
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.DgvExemplairesListe_ColumnHeaderMouseClick(System.Object,System.Windows.Forms.DataGridViewCellMouseEventArgs)">
+            <summary>
+            Tri sur une colonne
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.DgvReceptionExemplairesListe_SelectionChanged(System.Object,System.EventArgs)">
+            <summary>
+            Sélection d'une ligne complète et affichage de l'image sz l'exemplaire
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:Mediatek86.vue.FrmMediatek.components">
+            <summary>
+            Variable nécessaire au concepteur.
+            </summary>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.Dispose(System.Boolean)">
+            <summary>
+            Nettoyage des ressources utilisées.
+            </summary>
+            <param name="disposing">true si les ressources managées doivent être supprimées ; sinon, false.</param>
+        </member>
+        <member name="M:Mediatek86.vue.FrmMediatek.InitializeComponent">
+            <summary>
+            Méthode requise pour la prise en charge du concepteur - ne modifiez pas
+            le contenu de cette méthode avec l'éditeur de code.
+            </summary>
+        </member>
+        <member name="M:Mediatek86.Program.Main">
+            <summary>
+            Point d'entrée principal de l'application.
+            </summary>
+        </member>
+        <member name="T:Mediatek86.Properties.Resources">
+            <summary>
+              Une classe de ressource fortement typée destinée, entre autres, à la consultation des chaînes localisées.
+            </summary>
+        </member>
+        <member name="P:Mediatek86.Properties.Resources.ResourceManager">
+            <summary>
+              Retourne l'instance ResourceManager mise en cache utilisée par cette classe.
+            </summary>
+        </member>
+        <member name="P:Mediatek86.Properties.Resources.Culture">
+            <summary>
+              Remplace la propriété CurrentUICulture du thread actuel pour toutes
+              les recherches de ressources à l'aide de cette classe de ressource fortement typée.
+            </summary>
+        </member>
+    </members>
+</doc>
